@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - mynetwork
+
+  yourapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - mynetwork
+    depends_on:
+      - rabbitmq
+
+networks:
+  mynetwork:

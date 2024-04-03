@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "RabbitMQRPC.Sample": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
